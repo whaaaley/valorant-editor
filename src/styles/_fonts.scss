@@ -1,0 +1,15 @@
+
+//
+// Anton by Vernon Adams
+// https://fonts.google.com/specimen/Anton
+//
+
+$font-anton: anton, sans-serif;
+
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Anton-Regular.woff2') format('woff2');
+}

@@ -1,0 +1,120 @@
+
+$icon-drag: ic-drag-indicator-24px($dark-100);
+$icon-delete: ic-clear-24px($white);
+
+.editor-main,
+.editor-card,
+.editor-sub {
+  display: grid;
+  gap: 12px;
+}
+
+.editor-main {
+  width: 768px;
+  margin: auto;
+}
+
+.editor-card {
+  padding: 24px;
+  border-radius: 12px;
+  background: $dark-350;
+
+  input {
+    border-radius: 6px 0 0 6px;
+    font: 400 14px/34px sans-serif;
+    text-indent: 18px;
+  }
+
+  textarea {
+    min-height: 96px;
+    padding: 12px 18px;
+    border-radius: 6px 0 6px 6px;
+    font: 400 14px/21px sans-serif;
+    resize: none;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+    background: $dark-500;
+
+    &:focus {
+      border: 1px solid $valorant-red;
+    }
+  }
+}
+
+.editor-sub {
+  padding: 12px;
+  border: 2px solid $dark-200;
+  border-radius: 6px;
+}
+
+.editor-drag {
+  display: flex;
+  padding: 0 0 0 36px;
+  background: url($icon-drag) left no-repeat;
+  cursor: move;
+
+  &.-active {
+    padding: 24px 12px 24px 36px;
+    border: 2px solid $valorant-red;
+    border-radius: 6px;
+    background: mix($dark-400, $valorant-red);
+  }
+
+  &.-opaque {
+    opacity: 0.5;
+  }
+
+  button {
+    width: 36px;
+    height: 36px;
+    margin: 0 0 auto 0;
+    border-radius: 0 6px 6px 0;
+    outline: none;
+    background: $dark-200 url($icon-delete) center/18px no-repeat;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $valorant-red;
+    }
+  }
+}
+
+.editor-control {
+  display: flex;
+
+  a,
+  button {
+    padding: 0 18px;
+    border-radius: 6px;
+    outline: none;
+    font: 400 14px/36px sans-serif;
+    background: $dark-200;
+    cursor: pointer;
+
+    + a,
+    + button {
+      margin: 0 0 0 12px;
+    }
+
+    &:hover {
+      background: $dark-100;
+    }
+
+    &.-red {
+      background: $valorant-red;
+
+      &:hover {
+        background: mix($valorant-red, $white, 75%);
+      }
+    }
+  }
+
+  hr {
+    margin: auto;
+  }
+}
