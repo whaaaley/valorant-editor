@@ -23,7 +23,7 @@
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
-    "PROD": "readonly",
+    "NODE_ENV": "readonly",
     "STATIC": "readonly"
   }
 }
